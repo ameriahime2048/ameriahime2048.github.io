@@ -79,7 +79,7 @@
     </p>
     <hr>
     <p>
-    <strong class="important">Note:</strong> This site is the not official version of 2048. This site is the <a href="https://www.twitch.tv/ameriahime">Ameriahime</a>-version of 2048 LUL. You can play the original version on  <a href="http://git.io/2048">http://git.io/2048.</a> 
+    <strong class="important">Note:</strong> This site is the not official version of 2048. This site is the <a href="https://www.twitch.tv/ameriahime">Ameriahime</a>-version of 2048 LUL. You can play the original version on  <a href="http://git.io/2048">http://git.io/2048.</a> <br/> Also, you can change theme to <a href="javascript:console.log('theme changed')" onclick="c2()">another</a> or revert to <a href="javascript:console.log('theme changed')" onclick="c1()">classic view</a>
     </p>
     <hr>
     <p>
@@ -98,22 +98,29 @@
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
   <script>
+	function c1(){
+		var els = document.getElementsByTagName("style");
+		if (els.length==1){
+			var el = els[0];
+			el.innerHTML ="";
+		}
+	}
 	function c2(){
 		var els = document.getElementsByTagName("style");
 		if (els.length==1){
 			var el = els[0];
 			el.innerHTML = "\
-.tile.tile-2 .tile-inner {background-image: url(/img/p2/t2.png);};\
-.tile.tile-4 .tile-inner {background-image: url(/img/p2/t4.png);};\
-.tile.tile-8 .tile-inner {background-image: url(/img/p2/t8.png);};\
-.tile.tile-16 .tile-inner {background-image: url(/img/p2/t16.png);};\
-.tile.tile-32 .tile-inner {background-image: url(/img/p2/t32.png);};\
-.tile.tile-64 .tile-inner {background-image: url(/img/p2/t64.png);};\
-.tile.tile-128 .tile-inner {background-image: url(/img/p2/t128.png);};\
-.tile.tile-256 .tile-inner {background-image: url(/img/p2/t256.png);};\
-.tile.tile-512 .tile-inner {background-image: url(/img/p2/t512.png);};\
-.tile.tile-1024 .tile-inner {background-image: url(/img/p2/t1024.png);};\
-.tile.tile-2048 .tile-inner {background-image: url(/img/p2/t2048.png);};\
+.tile.tile-2 .tile-inner {background-image: url(/img/p2/t2.png);} \
+.tile.tile-4 .tile-inner {background-image: url(/img/p2/t4.png);} \
+.tile.tile-8 .tile-inner {background-image: url(/img/p2/t8.png);} \
+.tile.tile-16 .tile-inner {background-image: url(/img/p2/t16.png);} \
+.tile.tile-32 .tile-inner {background-image: url(/img/p2/t32.png);} \
+.tile.tile-64 .tile-inner {background-image: url(/img/p2/t64.png);} \
+.tile.tile-128 .tile-inner {background-image: url(/img/p2/t128.png);} \
+.tile.tile-256 .tile-inner {background-image: url(/img/p2/t256.png);} \
+.tile.tile-512 .tile-inner {background-image: url(/img/p2/t512.png);} \
+.tile.tile-1024 .tile-inner {background-image: url(/img/p2/t1024.png);} \
+.tile.tile-2048 .tile-inner {background-image: url(/img/p2/t2048.png);} \
 			"
 		}
 	}
