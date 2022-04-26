@@ -15,6 +15,8 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+<style>  
+</style>
 </head>
 <body>
   <div class="container">
@@ -95,5 +97,26 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+  <script>
+	function c2(){
+		var els = document.getElementsByTagName("style");
+		if (els.length==1){
+			var el = els[0];
+			el.innerHTML = "\
+.tile.tile-2 .tile-inner {background-image: url(/img/p2/t2.png);};\
+.tile.tile-4 .tile-inner {background-image: url(/img/p2/t4.png);};\
+.tile.tile-8 .tile-inner {background-image: url(/img/p2/t8.png);};\
+.tile.tile-16 .tile-inner {background-image: url(/img/p2/t16.png);};\
+.tile.tile-32 .tile-inner {background-image: url(/img/p2/t32.png);};\
+.tile.tile-64 .tile-inner {background-image: url(/img/p2/t64.png);};\
+.tile.tile-128 .tile-inner {background-image: url(/img/p2/t128.png);};\
+.tile.tile-256 .tile-inner {background-image: url(/img/p2/t256.png);};\
+.tile.tile-512 .tile-inner {background-image: url(/img/p2/t512.png);};\
+.tile.tile-1024 .tile-inner {background-image: url(/img/p2/t1024.png);};\
+.tile.tile-2048 .tile-inner {background-image: url(/img/p2/t2048.png);};\
+			"
+		}
+	}
+  </script>
 </body>
 </html>
